@@ -1,0 +1,233 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- my custom css file linked through express static public -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- tailwind cdn link -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- my font awesome cdn  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+    <!-- google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Vollkorn+SC&display=swap"
+        rel="stylesheet">
+
+
+    <title>Agri-c</title>
+</head>
+
+<body class="bg-gradient-to-r from-green-800 to-green-400" id="body">
+    <!-- start of navbar makeup -->
+
+    <body>
+        <!-- Navbar goes here -->
+        <section id="heading" class="">
+            <nav class=" shadow-lg sm:grid-cols-1">
+                <div class="max-w-6xl mx-auto px-4">
+                    <div class="flex justify-between">
+                        <div class="flex space-x-7">
+                            <!-- Website Logo -->
+                            <div class="">
+                                <a href="#heading" class="flex items-center py-4 px-2 ">
+                                    <h1 class="text-gray-50 h-15 text-7xl text-center"><i
+                                            class="fas fa-truck-monster"></i></h1>
+                                </a>
+                            </div>
+                            <!-- Primary Navbar items -->
+                            <div class=" hidden md:flex items-center space-x-7 mynavbar  ">
+                                <a href="#caurosel"
+                                    class="hover:text-green-800 text-gray-50 hover:bg-gray-50 nav-link">Home</a>
+                                <a href="#product"
+                                    class="hover:text-green-800 text-gray-50 hover:bg-gray-50 nav-link">Product</a>
+                                <a href="#about"
+                                    class="hover:text-green-800 text-gray-50 hover:bg-gray-50 nav-link">About</a>
+                                <a href="#contact"
+                                    class="hover:text-green-800 text-gray-50 hover:bg-gray-50 nav-link">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <!-- end of my nav bar -->
+        <section id="caurosel">
+            <!-- start of my caurosel -->
+            <div class="carousel">
+                <div class="carousel-inner h-4/5 w-full">
+                    <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true"
+                        hidden="" checked="checked">
+                    <div class="carousel-item">
+                        <img src="images/agric_machine.jpg" class="h-4/5 w-full">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
+                        hidden="">
+                    <div class="carousel-item">
+                        <img src="images/tractor.jpg" class="h-4/5 w-full">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
+                        hidden="">
+
+                    <label for="carousel-2" class="carousel-control next control-1">›</label>
+                    <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                    <label for="carousel-2" class="carousel-control prev control-1">‹</label>
+                    <label for="carousel-1" class="carousel-control next control-2">›</label>
+                    <ol class="carousel-indicators">
+                        <li>
+                            <label for="carousel-1" class="carousel-bullet">•</label>
+                        </li>
+                        <li>
+                            <label for="carousel-2" class="carousel-bullet">•</label>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="about">
+            <div class="text-center w-1/4 text-gray-50 m-auto ">
+                <h1 class="h1 font-bold text-3xl">Eat to Live</h1>
+                <p class="font-medium message text-xl leading-8"> We are an agro industrial company that produces and
+                    manufactures
+                    food, edibles.
+                    We have a strong entrepreneurial culture and we continuously work towards improving every aspect of
+                    our operations.</p>
+            </div>
+        </section>
+
+
+        <section id="product">
+            <!-- start of my product section html with tailwindcss -->
+            <div class="p-10 grid grid-cols-2 text-gray-50 place-items-center mb-30 text-center">
+                <!--Card 1-->
+                <div
+                    class="hover:text-green-800 max-w-sm rounded overflow-hidden shadow-lg hover:bg-gray-50 rounded-r-3xl	">
+                    <a href="">
+                        <img class="w-full " src="images/ball_pepper.jpg" alt="Mountain">
+                        <div class="px-6 py-4">
+
+                            <p class=" text-base font-bold text-xl mb-2">
+                                Ball Pepper
+                            </p>
+
+                        </div>
+                    </a>
+                </div>
+                <!-- end of card -->
+                <!--Card 2-->
+                <div
+                    class="hover:text-green-800 max-w-sm rounded overflow-hidden shadow-lg hover:bg-gray-50 rounded-r-3xl	">
+                    <a href="">
+                        <img class="w-full" src="images/green_chili_pepper.jpg" alt="Mountain">
+                        <div class="px-6 py-4">
+
+                            <p class="text-base font-bold text-xl mb-2">
+                                Green Chili Pepper
+                            </p>
+
+                        </div>
+                    </a>
+                </div>
+                <!-- end of card -->
+                <!--Card 3-->
+
+                <div
+                    class="hover:text-green-800 max-w-sm rounded overflow-hidden shadow-lg hover:bg-gray-50 rounded-r-3xl	">
+                    <a href="">
+                        <img class="w-full" src="images/red_chili.jpg" alt="Mountain">
+                        <div class="px-6 py-4">
+
+                            <p class="text-base font-bold text-xl mb-2">
+                                Red Chili Pepper
+                            </p>
+
+
+                        </div>
+                    </a>
+                </div>
+                <!-- end of card -->
+                <!--Card 4-->
+
+                <div
+                    class="hover:text-green-800 max-w-sm rounded overflow-hidden shadow-lg hover:bg-gray-50 rounded-r-3xl	">
+                    <a href="">
+                        <img class="w-full" src="images/onion2.jpg" alt="Mountain">
+                        <div class="px-6 py-4">
+                            <p class="text-base font-bold text-xl mb-2">
+                                Onion
+                            </p>
+
+
+                        </div>
+                    </a>
+                </div>
+                <!-- end of card -->
+            </div>
+
+        </section>
+        <section id="gender">
+            <div class="text-center bg-gray-50 age-form">
+                <h3 class="text-base font-bold text-xl pt-0 mt-0 mb-5 pb-5 text-gray-700">Guess Your Gender</h3>
+                <form action="/" method="post" class="pt-5">
+                    <input type="text" name="cName" class="border border-green-600" autocomplete="off"
+                        placeholder="Type Here">
+                    <button class=" btn bg-green-800 hover:bg-gray-50 text-gray-50 hover:text-green-600 text-xl"
+                        type="submit" name="submit"><i class="fas fa-sign-in-alt"></i></button>
+                </form>
+
+                <div>
+                    <% for( let i = 0; i < name.length; i++ ) { %>
+                    <h3 class="h1 font-bold text-3xl">Your name is: <%= name[i] %> </h3>
+                    <p class="font-medium message text-xl leading-8">Your gender is: <%= gender[i] %> </p>
+                    <p class="font-medium message text-xl leading-8">Probablity of Name: <%= prob[i] %> </p>
+                    <% } %>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- start of contact section  -->
+        <section id="contact">
+            <div class="grid grid-cols-2 text-center">
+                <div class="bg-gray-50 text-green-800">
+                    <span>
+                        <h3>Contact Us Now</h3>
+                        <p>Email: lovguya@gmail.com</p>
+                        <p>phone: +380731185943</p>
+                    </span>
+
+                </div>
+                <div class="text-gray-50">
+                    <h3>Office Location</h3>
+                    <p>No 28 bab'yaka street Uzhhorod Ukraine.</p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <footer id="footer">
+            <div class="text-center w-1/4 text-gray-50 m-auto ">
+                <h1 class=" h1 font-bold text-3xl"><%= presentDay %> </h1>
+            </div>
+
+        </footer>
+    </body>
+
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>

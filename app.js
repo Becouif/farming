@@ -14,13 +14,14 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-var names = [];
-var genders = [];
-var proba = [];
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html")
-    var date = new Date();
-    var options = {
+const names = [];
+const genders = [];
+const proba = [];
+
+
+
+const date = new Date();
+    const options = {
         weekday: "long",
         year: "numeric",
         month: "short",
@@ -28,7 +29,11 @@ app.get("/", (req, res) => {
         hour: "2-digit",
         minute: "2-digit"
     }
-    var todayDate = date.toLocaleTimeString("en-us", options)
+    const todayDate = date.toLocaleTimeString("en-us", options)
+// beginning of app get
+app.get("/", (req, res) => {
+    
+    
 
     res.render('index', {presentDay:todayDate, name:names, gender:genders, prob:proba
     });
@@ -36,9 +41,51 @@ app.get("/", (req, res) => {
 
 })
 
+app.get('/gender', (req, res) => {
+    
+    res.render('gender', {
+        presentDay:todayDate,
+        name:names, gender:genders, prob:proba
+    })
+})
 
+app.get('/product', (req,res) => {
+    res.render('product', {
+        presentDay:todayDate,
+    })
+})
+
+
+// beginning of app post 
 app.post("/", (req, res) => {
-    var userName = req.body.cName
+    // const userName = req.body.cName
+
+    // const url = "https://api.genderize.io?name=" + userName;
+    // https.get(url, (response) => {
+    //     response.on("data", (data) => {
+    //         spaceData = JSON.parse(data);
+    //         dataName = spaceData.name;
+    //         dataGender = spaceData.gender;
+    //         dataPro = spaceData.probability;
+    //         names.push(dataName);
+    //         genders.push(dataGender);
+    //         proba.push(dataPro);
+            
+    //         res.redirect('/')
+    //         setTimeout(() => {
+    //             names.pop(dataName);
+    //             genders.pop(dataGender);
+    //             proba.pop(dataPro)
+    //         }, 2000);
+    //     })
+    // })
+
+    
+})
+
+
+app.post('/gender', (req,res) => {
+    const userName = req.body.cName
 
     const url = "https://api.genderize.io?name=" + userName;
     https.get(url, (response) => {
@@ -50,17 +97,8 @@ app.post("/", (req, res) => {
             names.push(dataName);
             genders.push(dataGender);
             proba.push(dataPro);
-            
-            res.redirect('/')
-            setTimeout(() => {
-                names.pop(dataName);
-                genders.pop(dataGender);
-                proba.pop(dataPro)
-            }, 2000);
         })
     })
-
-    
 })
 
 

@@ -1,6 +1,6 @@
 
 body {
-    cursor: grab;
+    
     /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%); */
 }
 
@@ -33,16 +33,11 @@ p.message {
 /* my footer section css */
 #footer {
     padding: 7rem;
-    font-family: 'Vollkorn SC', serif;
+    font-family: 'Alegreya Sans', sans-serif;
 }
 
-
-
-/* my guess gender section css set up  */
-#gender {
-    font-family: 'Vollkorn SC', serif;
-    margin: 8rem;
-    font-size: larger;
+.cursor-dis {
+    cursor: crosshair;
 }
 
 .age-form {

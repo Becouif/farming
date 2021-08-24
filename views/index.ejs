@@ -117,31 +117,10 @@
         </div>
 
     </section>
-    <section id="gender">
-        <div class="text-center border-gray-50 age-form">
-            <h3 class="text-base font-bold text-xl pt-0 mt-0 mb-5 pb-5 text-gray-700">Guess Your Gender</h3>
-            <form action="/gender" class="pt-5">
-                <input type="text" name="cName" class="border border-green-600" autocomplete="off"
-                    placeholder="Type Here">
-                <button class=" btn bg-green-800 hover:bg-gray-50 text-gray-50 hover:text-green-600 text-xl"
-                    type="submit" name="submit"><i class="fas fa-sign-in-alt"></i></button>
-            </form>
 
-            <div>
-                <% for( let i = 0; i < name.length; i++ ) { %>
-                <h3 class="h1 font-bold text-3xl">Your name is: <%= name[i] %> </h3>
-                <p class="font-medium message text-xl leading-8">Your gender is: <%= gender[i] %> </p>
-                <p class="font-medium message text-xl leading-8">Probablity of Name: <%= prob[i] %> </p>
-                <% } %>
-
-            </div>
-
-        </div>
-
-    </section>
     <!-- start of contact section  -->
-    <section id="contact">
-        <div class="grid grid-cols-2 text-center">
+    <section id="contact" class="my-20">
+        <div class="grid grid-cols-2 text-center cursor-dis">
             <div class="bg-gray-50 text-green-800">
                 <span>
                     <h3>Contact Us Now</h3>
@@ -150,7 +129,7 @@
                 </span>
 
             </div>
-            <div class="text-gray-50">
+            <div class="text-gray-50 cursor-dis">
                 <h3>Office Location</h3>
                 <p>No 28 bab'yaka street Uzhhorod Ukraine.</p>
             </div>

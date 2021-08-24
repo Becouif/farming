@@ -14,10 +14,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-const names = [];
-const genders = [];
-const proba = [];
-
 
 
 const date = new Date();
@@ -31,23 +27,22 @@ const date = new Date();
     }
     const todayDate = date.toLocaleTimeString("en-us", options)
 // beginning of app get
-app.get("/", (req, res) => {
-    
-    
 
-    res.render('index', {presentDay:todayDate, name:names, gender:genders, prob:proba
+app.get('/', (req,res) => {
+    
+    res.render('landing', {presentDay:todayDate,
+    });
+})
+
+app.get("/index", (req, res) => {
+    res.render('index', {presentDay:todayDate,
     });
 
 
 })
 
-app.get('/gender', (req, res) => {
-    
-    res.render('gender', {
-        presentDay:todayDate,
-        name:names, gender:genders, prob:proba
-    })
-})
+
+
 
 app.get('/product', (req,res) => {
     res.render('product', {
@@ -58,48 +53,10 @@ app.get('/product', (req,res) => {
 
 // beginning of app post 
 app.post("/", (req, res) => {
-    // const userName = req.body.cName
-
-    // const url = "https://api.genderize.io?name=" + userName;
-    // https.get(url, (response) => {
-    //     response.on("data", (data) => {
-    //         spaceData = JSON.parse(data);
-    //         dataName = spaceData.name;
-    //         dataGender = spaceData.gender;
-    //         dataPro = spaceData.probability;
-    //         names.push(dataName);
-    //         genders.push(dataGender);
-    //         proba.push(dataPro);
-            
-    //         res.redirect('/')
-    //         setTimeout(() => {
-    //             names.pop(dataName);
-    //             genders.pop(dataGender);
-    //             proba.pop(dataPro)
-    //         }, 2000);
-    //     })
-    // })
-
+ 
     
 })
 
-
-app.post('/gender', (req,res) => {
-    const userName = req.body.cName
-
-    const url = "https://api.genderize.io?name=" + userName;
-    https.get(url, (response) => {
-        response.on("data", (data) => {
-            spaceData = JSON.parse(data);
-            dataName = spaceData.name;
-            dataGender = spaceData.gender;
-            dataPro = spaceData.probability;
-            names.push(dataName);
-            genders.push(dataGender);
-            proba.push(dataPro);
-        })
-    })
-})
 
 
 
